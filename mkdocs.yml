@@ -1,0 +1,88 @@
+site_name: 'Mkdocs documentation template'
+site_url: "http://localhost:8000/" # replace with your website published path under which this documentation is published, eg. https://mysite.com/this_docs/ 
+dev_addr: "127.0.0.1:8000"
+use_directory_urls: true
+
+nav:
+  - 'HOME': 'index.md'
+  - 'Topic':
+    - 'Topic/index.md'
+    - 'Topic page': 'Topic/Topic page.md'
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.svg
+  icon:
+    annotation: material/plus-circle
+  palette:
+    scheme: default
+  features:
+    - content.code.select
+    - content.tooltips
+    - content.code.copy
+    - content.code.annotate
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  #- git-revision-date # disabled in case of too many warnings "has no git logs, revision date defaulting to today's date" when some files were not added to commits
+  - search
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - sane_lists
+  - tables
+  - toc:
+      anchorlink: true
+      permalink: "#"
+      baselevel: 2
+      separator: "_"
+
+watch:
+  - includes
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

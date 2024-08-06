@@ -1,0 +1,15 @@
+.md-header, .md-tabs {
+  background-color: #40638a;
+}
+.md-typeset a, .md-nav__link[href]:hover {
+  color: #6095cf;
+}
+.md-nav__item .md-nav__link--active, .md-typeset a:hover{
+color: #40638a;
+}
+.md-main__inner.md-grid {
+  max-width: 1900px !important;
+}
+p {
+  text-align: justify !important;
+}
