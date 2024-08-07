@@ -1,0 +1,19 @@
+{
+    "sample": "",
+    "beam_energy": 200,
+    "mode": "",
+    "spot": null,
+    "cameralength": null,
+    "magnification": null,
+    "exposure_time": null,
+    "navigation_shape": [null, null],
+    "lineskip": null,
+    "Holder": "",
+    "X": null,
+    "Y": null,
+    "Z": null,
+    "Alpha": null,
+    "Beta": null,
+    "rocking_frequency": null,
+    "rocking_angle": null
+}

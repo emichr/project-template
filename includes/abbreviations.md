@@ -1,1 +1,0 @@
-*[ABV]: Some abbreviation 

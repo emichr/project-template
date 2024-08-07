@@ -1,18 +1,20 @@
-site_name: 'Mkdocs documentation template'
+site_name: 'Project documentation'
 site_url: "http://localhost:8000/" # replace with your website published path under which this documentation is published, eg. https://mysite.com/this_docs/ 
 dev_addr: "127.0.0.1:8000"
 use_directory_urls: true
+docs_dir: "../"
 
 nav:
-  - 'HOME': 'index.md'
-  - 'Topic':
-    - 'Topic/index.md'
-    - 'Topic page': 'Topic/Topic page.md'
+  - 'Project X':
+    - 'Description': 'Documentation/docs/index.md'
+    - 'Experiments': 'Documentation/docs/Experiments/index.md'
+    - 'Analysis': 'Documentation/docs/Analysis/index.md'
+    - 'Litterature': 'Documentation/docs/Litterature/index.md'
 
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/logo.svg
+  logo: Documentation/docs/assets/logo.svg
   icon:
     annotation: material/plus-circle
   palette:
@@ -35,7 +37,7 @@ theme:
     - search.share
 
 extra_css:
-  - stylesheets/extra.css
+  - Documentation/docs/stylesheets/extra.css
 
 plugins:
   #- git-revision-date # disabled in case of too many warnings "has no git logs, revision date defaulting to today's date" when some files were not added to commits
@@ -59,7 +61,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       auto_append:
-        - includes/abbreviations.md
+        - Documentation/includes/abbreviations.md
+      base_path:
+        - '..'
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
