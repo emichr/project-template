@@ -7,9 +7,11 @@ docs_dir: "../"
 nav:
   - 'Project X':
     - 'Description': 'Documentation/docs/index.md'
-    - 'Experiments': 'Documentation/docs/Experiments/index.md'
-    - 'Analysis': 'Documentation/docs/Analysis/index.md'
-    - 'Litterature': 'Documentation/docs/Litterature/index.md'
+  - 'Experiments': 'Documentation/docs/Experiments/index.md'
+  - 'Analysis': 'Documentation/docs/Analysis/index.md'
+  - 'Litterature': 'Documentation/docs/Litterature/index.md'
+  - 'Blog':
+    - 'Blog': 'Documentation/docs/blog/index.md'
 
 theme:
   name: material
@@ -60,6 +62,15 @@ plugins:
   #- git-revision-date # disabled in case of too many warnings "has no git logs, revision date defaulting to today's date" when some files were not added to commits
   - search
   - tags
+  - blog:
+      archive_date_format: MMMM YYYY
+      blog_toc: true
+      post_date_format: medium
+      archive_toc: true
+      blog_dir: Documentation/docs/blog
+  - bibtex:
+      bib_file: "docs/Litterature/references.bib"
+      bib_by_default: true
 
 markdown_extensions:
   - abbr
